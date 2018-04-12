@@ -8,16 +8,6 @@
     {
         private HashBase _hash = new Hash256();
 
-        public string PreviousHash { get; set; }
-
-        public DateTimeOffset Timestamp { get; set; } = DateTimeOffset.UtcNow;
-
-        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
-
-        public decimal Nonce { get; set; } = 0;
-
-        public string Hash { get; private set; }
-
         public Block()
         {
             this.Hash = this.CalculateHash();
@@ -30,6 +20,16 @@
             this.Transactions = transactions?.ToList() ?? new List<Transaction>();
             this.Hash = this.CalculateHash();
         }
+
+        public string PreviousHash { get; set; }
+
+        public DateTimeOffset Timestamp { get; set; } = DateTimeOffset.UtcNow;
+
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
+
+        public decimal Nonce { get; set; } = 0;
+
+        public string Hash { get; private set; }
 
         public string CalculateHash()
         {

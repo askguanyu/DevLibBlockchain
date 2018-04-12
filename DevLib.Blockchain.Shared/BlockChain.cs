@@ -1,21 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DevLib.Blockchain
+﻿namespace DevLib.Blockchain
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class BlockChain
     {
-        public List<Block> Blocks { get; set; } = new List<Block>();
-        public List<Transaction> PendingTransactions { get; set; } = new List<Transaction>();
-        public int Difficulty { get; set; } = 2;
-        public decimal MiningReward { get; set; } = 100;
-
         public BlockChain()
         {
             this.Blocks.Insert(0, this.CreateGenesisBlock());
         }
+
+        public List<Block> Blocks { get; set; } = new List<Block>();
+
+        public List<Transaction> PendingTransactions { get; set; } = new List<Transaction>();
+
+        public int Difficulty { get; set; } = 2;
+
+        public decimal MiningReward { get; set; } = 100;
 
         public Block CreateGenesisBlock()
         {
