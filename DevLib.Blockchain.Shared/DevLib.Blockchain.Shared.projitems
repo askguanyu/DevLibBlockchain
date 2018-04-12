@@ -9,5 +9,11 @@
     <Import_RootNamespace>DevLib.Blockchain</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Block.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BlockChain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hash256.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HashBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SerializationExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Transaction.cs" />
   </ItemGroup>
 </Project>
